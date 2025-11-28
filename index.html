@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地鼠的 GIT 冒險島 🌴</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 引入 FontAwesome 作為圖示 -->
+    <link rel="stylesheet" href="cdnjs.cloudflare.com">
+</head>
+<body>
+    <header>
+        <h1>🐹 地鼠的 GIT 冒險島 🌴</h1>
+        <p>跟著小地鼠，輕鬆學會 GIT 指令！</p>
+    </header>
+
+    <main class="container">
+        <div class="intro-card">
+            <h2>嗨，冒險家！</h2>
+            <p>準備好探索版本控制的秘密了嗎？點擊下方的指令卡片，看看它們有什麼超能力吧！</p>
+        </div>
+
+        <!-- 指令卡片列表 -->
+        <div class="command-grid">
+            <div class="card" onclick="showModal('add')">
+                <i class="fas fa-plus-circle icon-add"></i>
+                <h3>ADD</h3>
+            </div>
+            <div class="card" onclick="showModal('commit')">
+                <i class="fas fa-check-circle icon-commit"></i>
+                <h3>COMMIT</h3>
+            </div>
+            <div class="card" onclick="showModal('push')">
+                <i class="fas fa-arrow-up icon-push"></i>
+                <h3>PUSH</h3>
+            </div>
+            <div class="card" onclick="showModal('pull')">
+                <i class="fas fa-arrow-down icon-pull"></i>
+                <h3>PULL</h3>
+            </div>
+            <div class="card" onclick="showModal('revert')">
+                <i class="fas fa-undo icon-revert"></i>
+                <h3>REVERT</h3>
+            </div>
+            <div class="card" onclick="showModal('checkout')">
+                <i class="fas fa-exchange-alt icon-checkout"></i>
+                <h3>CHECKOUT</h3>
+            </div>
+            <div class="card" onclick="showModal('merge')">
+                <i class="fas fa-code-branch icon-merge"></i>
+                <h3>MERGE</h3>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 GIT 冒險島. 學習愉快！</p>
+    </footer>
+
+    <!-- 彈出視窗 Modal -->
+    <div id="commandModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title">指令名稱</h2>
+            <p id="modal-description">這裡會放置指令的詳細說明。</p>
+            <div class="code-block">
+                <code>git <span id="modal-command-syntax">command</span></code>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
